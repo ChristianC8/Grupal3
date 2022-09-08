@@ -1,10 +1,10 @@
 Grupo Entregable 3.
 
 Nombres:
-Christian Castellano
-Ignacio Cattalurda
-Marcos Andrada
-Franco Pelua
+Christian Castellano,
+Ignacio Cattalurda,
+Marcos Andrada,
+Franco Pelua.
 
 
 
