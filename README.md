@@ -3,7 +3,8 @@ Grupo Entregable 3.
 Nombres:
 Christian Castellano
 Ignacio Cattalurda
-Aqui agregen los demas nombres no los encontre 
+Marcos Andrada
+Franco Pelua
 
 
 
