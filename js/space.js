@@ -2,14 +2,17 @@ const searchURL = "https://images-api.nasa.gov/search?q="
 const imageContainer = document.getElementById("imageContainer")
 document.getElementById("btnBuscar").addEventListener("click", imageSearch)
 let imageUrl = "http://images-assets.nasa.gov/image/" 
+// + itemsArray[i].data[0].nasa_id + "/" + itemsArray[i].data[0].nasa_id + "~thumb.jpg"
+// http://images-assets.nasa.gov/image/PIA20970/PIA20970~thumb.jpg
 
 
 async function imageSearch(){
-    const result = await getJSONData(searchURL + searchParameter)  
     imageContainer.innerHTML = ""
     let searchParameter = document.getElementById("inputBuscar").value
+    const result = await getJSONData(searchURL + searchParameter)  
     let itemsArray = result.data.collection.items
     let itemsToAppend = ""
+    console.log(itemsArray)
     for (let i = 0; i < itemsArray.length ; i++) {
         if (itemsArray[i].data[0].media_type == "image") {
         itemsToAppend +=
@@ -24,9 +27,11 @@ async function imageSearch(){
                 </div>
                 <p class="card-text">`+ itemsArray[i].data[0].date_created +`</p>
             </div>
-        </div>`
-    }}
+        </div>`}
+    }
+
     imageContainer.innerHTML += itemsToAppend
+
 }
 
 
